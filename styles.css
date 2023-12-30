@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Merienda+One");
+
+html {
+  background-color: #000;
+  background-image: url(https://images.unsplash.com/photo-1531972497489-8eb337acf6e5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=193456e9385b553747a5e0f0cbc7badb&auto=format&fit=crop&w=1334&q=80);
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+
+body {
+  margin: 0;
+  overflow: visible; /* Hide overflow to prevent scrollbars */
+}
+
+
+header {
+  position: relative;
+  height: 70px;
+  background-color: #2d1188; 
+  overflow: hidden;
+  opacity: 1;
+}
+h1{
+  color: aliceblue;
+  margin-left: 40px;
+}
+
+
+body,
+
+.snow {
+  &:before,
+  &:after {
+    content: "";
+    position: fixed;
+    top: -3000%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(black, 0.01);
+    background-image: url(http://www.freepngimg.com/download/winter_snow/4-2-white-snow-png.png);
+    background-size: 30%;
+    animation-name: MOVE-BG;
+    animation-duration: 500s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+body {
+  &:before {
+    filter: blur(6px);
+    opacity: 0.8;
+  }
+  &:after {
+    filter: blur(1px);
+    top: -1500%;
+    background-image: url(http://www.freepngimg.com/download/winter_snow/4-2-white-snow-png.png);
+    background-size: 80%;
+    animation-duration: 200s;
+  }
+}
+
+@keyframes MOVE-BG {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(70%);
+  }
+}
+
+
+/* Adjust content area when menu is open */
+#main {
+    margin-left: 250px;
+
+}
+
+p{
+  color: #2d1188;
+  font-style: italic;
+  font-family: Helvetica;
+}
+h2,h3{
+  color: rgb(214, 63, 63);
+  font-family: 'Lucida Sans',cursive;
+}
+
+.card-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  max-width: 300px;
+  /*transition: transform 0.3s ease-in-out;*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.card a{
+  position: relative;
+  z-index: 1;
+}
+
+.card p{
+  color: rgb(69, 225, 55);
+  font-family: 'Merienda One', cursive;
+}
+#santa-claus {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-120%);
+  max-width: 800px;
+  height: auto;
+}
